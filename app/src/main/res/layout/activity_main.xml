@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="horizontal">
+
+    <com.pedro.library.view.OpenGlView
+        android:id="@+id/openGlView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbYoutube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="YouTube" />
+
+                <RadioButton
+                    android:id="@+id/rbFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etYoutubeKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="YouTube stream key"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etFacebookKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Facebook stream key"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etOverlayText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Overlay text"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnApplyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apply text" />
+
+            <Button
+                android:id="@+id/btnLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick logo" />
+
+            <Button
+                android:id="@+id/btnSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Switch camera" />
+
+            <Button
+                android:id="@+id/btnLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GO LIVE" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Ready" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
